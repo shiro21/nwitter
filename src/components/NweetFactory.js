@@ -45,7 +45,6 @@ const NweetFactory = ({ userObj }) => {
         setNweet(value);
     };
     const onFileChange = (e) => {
-        console.log(e);
         const { target: { files }} = e;
 
         const oneFile = files[0];

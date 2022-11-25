@@ -31,8 +31,6 @@ const Profile = ({ userObj, refreshUser }) => {
     const onSubmit = async (e) => {
         e.preventDefault();
         if (userObj.displayName !== newDisplayName) {
-            console.log(userObj.displayName)
-            console.log(newDisplayName)
             await updateProfile(user, { displayName: newDisplayName });
             refreshUser();
         }
