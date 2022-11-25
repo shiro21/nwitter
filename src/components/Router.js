@@ -7,8 +7,10 @@ import Navigation from "./Navigation";
 
 const AppRouter = ({ isLoggedIn, userObj, refreshUser }) => {
 
+    const url = process.env.PUBLIC_URL;
+
     return (
-        <Router>
+        <Router basename={url}>
             { isLoggedIn && <Navigation userObj={userObj} /> }
             <Routes>
                 {
